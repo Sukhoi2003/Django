@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=" UTF-8 ">
+    <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
+    <link rel="stylesheet" href="./style.css">
+    <title>Post info</title>
+
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 3xp solid black
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Posts</h1>
+    <table style="width: 100%; margin: auto; border: 2px solid red">
+        <p class="captions">There are some posts</p>
+        <tr style="text-align: center; background-color: rgb(18, 67, 181); ">
+            <td>
+                <h2 class="post1">Post title</h2>
+            </td>
+            <td>
+                <h2>Post defination</h2>
+            </td>
+            <td>
+                <h2>Post Body</h2>
+            </td>
+        </tr>
+        {%for post in posts%}
+        <tr>
+            <td>{{post.title}}</td>
+            <td>{{post.defination}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+
+</html>
